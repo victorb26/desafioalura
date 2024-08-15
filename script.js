@@ -27,3 +27,12 @@ function copiarTexto() {
     document.execCommand("copy");
     alert("Texto copiado para a área de transferência!");
 }
+function sanitizeText(text) {
+    text = text.toLowerCase();
+    text = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return text;
+}
+document.getElementById('input-text').addEventListener('input', function (event) {
+    const currentValue = event.target.value;
+    event.target.value = sanitizeText(currentValue);
+});
