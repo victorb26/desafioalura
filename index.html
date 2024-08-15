@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografia de Texto</title>
     <link rel="stylesheet" href="style.css">
-    <title>Criptografia e Descriptografia</title>
 </head>
+
 <body>
     <div class="container">
-        <h1>Criptografia e Descriptografia</h1>
-        <textarea id="inputText" placeholder="Digite o texto aqui..."></textarea>
+        <h1>Criptografia de Texto</h1>
+        <textarea id="input-text" placeholder="Digite seu texto aqui..."></textarea>
         <div class="buttons">
-            <button id="encryptBtn">Criptografar</button>
-            <button id="decryptBtn">Descriptografar</button>
+            <button onclick="criptografar()">Criptografar</button>
+            <button onclick="descriptografar()">Descriptografar</button>
         </div>
-        <div class="output" id="outputText">Resultado aparecerá aqui...</div>
+        <textarea id="output-text" readonly placeholder="Resultado..."></textarea>
+        <button id="copy-button" onclick="copiarTexto()">Copiar</button>
     </div>
-    <footer>
-        Desenvolvido por Victor Barros
-    </footer>
+    </body>
+    <script src="script.js"></script>
 </body>
+
 </html>
