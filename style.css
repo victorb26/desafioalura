@@ -1,14 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #ffffff;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 1%;
 }
 
 section {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: flex-start;
+    justify-content: space-around;
 }
 
 .container1 {
@@ -35,7 +42,7 @@ h1 {
 }
 
 textarea:focus {
-    border-color: #007bff;
+    border-color: #0A3871;
     outline: none;
 }
 
@@ -49,8 +56,8 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    border-radius: 6px;
-    background-color: #007bff;
+    border-radius: 15px;
+    background-color: #0A3871;
     color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -65,11 +72,16 @@ button:disabled {
 button:hover:not(:disabled) {
     background-color: red;
 }
+#btnDecript{
+    background-color: gray;
+}
+#btnDecript:hover:not(:disabled){
+    background-color: red;
+}
 
 #copy-button {
     background-color: #28a745;
 }
-
 #copy-button:hover:not(:disabled) {
     background-color: yellowgreen;
 }
@@ -90,21 +102,22 @@ button:hover:not(:disabled) {
     margin-bottom: 10px;
     font-size: 16px;
     border-radius: 6px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
+    border: none;
+    background-color: #ffffff;
     resize: none;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s ease;
 }
 
 footer{
-    display: inline-block;
     width: 100%;
     margin-top: 2%;
     padding: 10px;
+    background: radial-gradient(ellipse at top, #20ced8, transparent),
+              radial-gradient(ellipse at bottom, #0A3871, transparent),
+              radial-gradient(circle at 10%, #1974d1, transparent);
 }
 #github{
-    margin-left: 47%;
+    margin-left: 46%;
 }
 h3{
     font-size: 10px;
