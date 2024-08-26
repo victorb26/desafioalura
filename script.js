@@ -20,18 +20,21 @@ function descriptografar() {
     document.getElementById('output-text').value = textoDescriptografado;
 }
 function copiarTexto() {
-    const textoCopiado = document.getElementById('output-text');
-    const texto = textoCopiado.value.trim(); 
+    const textareaInput = document.getElementById('input-text'); 
+    const textareaOutput = document.getElementById('output-text'); 
+    const texto = textareaOutput.value.trim(); 
     
     if (texto === "") {
         alert("Não há texto para copiar!");
         return; 
     }
     
-    textoCopiado.select();
-    textoCopiado.setSelectionRange(0, 99999);
+    textareaOutput.select();
+    textareaOutput.setSelectionRange(0, 99999);
     document.execCommand("copy");
     alert("Texto copiado para a área de transferência!");
+    
+    textareaInput.value = "";
 }
 function sanitizeText(text) {
     text = text.toLowerCase();
