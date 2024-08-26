@@ -163,3 +163,15 @@ h3{
     text-transform: uppercase;
     text-align: center;
 }
+
+@media (max-width: 900px) {
+    header{
+        display: flex;
+        justify-content: center;
+    }
+
+    section{
+        display: grid;
+        flex-direction: column;
+    }
+}
