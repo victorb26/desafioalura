@@ -19,9 +19,15 @@ function descriptografar() {
         .replace(/ufat/g, "u");
     document.getElementById('output-text').value = textoDescriptografado;
 }
-
 function copiarTexto() {
     const textoCopiado = document.getElementById('output-text');
+    const texto = textoCopiado.value.trim(); 
+    
+    if (texto === "") {
+        alert("Não há texto para copiar!");
+        return; 
+    }
+    
     textoCopiado.select();
     textoCopiado.setSelectionRange(0, 99999);
     document.execCommand("copy");
