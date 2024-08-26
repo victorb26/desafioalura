@@ -39,6 +39,12 @@ section {
     text-align: center;
 }
 
+.letrasMin{
+display: flex;
+font-size: 9px;
+color: rgb(102, 102, 102);
+}
+
 textarea:focus {
     border-color: #0A3871;
     outline: none;
